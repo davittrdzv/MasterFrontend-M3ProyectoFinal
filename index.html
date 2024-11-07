@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="content">
+        <div id="pass-main-div">
+            <h3 id="pass-title">PASSWORD GENERATOR</h3>
+            <div id="pass-generated">
+                <div id="show-password">
+                    <span id="show-password-span">Your password will be shown here</span>
+                </div>
+                <div id="copy-password">
+                    <img id="copy-password-icon" src="images/copy-regular.svg" alt="Copy Password">
+                </div>
+            </div>
+            <div id="pass-length">
+                
+            </div>
+            <div id="pass-characteristics">
+                <div id="char-length-div">
+                    <label for="char-length" id="char-length">Character Length:</label>
+                    <output  id="output">8</output>
+                </div>
+                <div id="length-number">
+                    <input type="range" id="char-length-bar" name="character-length" min="0" max="20" step="1" value="8" oninput="output.value = this.value"><br>
+                </div>
+                <input type="checkbox" id="uppercaseOption" name="pass-char" value="uppercase">
+                <label for="uppercaseOption"> Include Uppercase Letters</label><br>
+                <input type="checkbox" id="lowercaseOption" name="pass-char" value="lowercase">
+                <label for="lowercaseOption"> Include Lowercase Letters</label><br>
+                <input type="checkbox" id="numbersOption" name="pass-char" value="numbers">
+                <label for="numbersOption"> Include Numbers</label><br>
+                <input type="checkbox" id="symbolsOption" name="pass-char" value="symbols">
+                <label for="symbolsOption"> Include Symbols</label><br>
+                <div id="pass-strength">
+                    <div id="pass-strength-fix">STRENGTH</div>
+                    <div id="pass-strength-pic">
+                        <img id="pass-strength-level" class="pass-strength-pic" src="images/password_strength_level_0.jpg" alt="Password Strength">
+                    </div>
+                </div>
+                <div id="generate-pass">
+                    <button id="generate-pass-button">GENERATE →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

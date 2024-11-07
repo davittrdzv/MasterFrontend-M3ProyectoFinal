@@ -1,0 +1,125 @@
+* {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    padding: 1px;
+}
+html {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+#content {
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    height: 90vh;
+}
+#pass-main-div {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    padding: 1em;
+    border: 2px solid #91e40d;
+    border-radius: 1em;
+}
+#pass-title {
+    text-align: center;
+    color: #91e40d;
+}
+#pass-generated, #pass-length, #pass-strength {
+    display: flex;
+    flex-direction: row;
+}
+#copy-password-icon {
+    width: 1em;
+}
+#show-password, #char-length {
+    width: 75%;
+}
+#pass-strength-fix {
+    font-size: large;
+    font-weight: bold;
+}
+#show-password-span {
+    text-align: justify;
+}
+#char-length-bar {
+    width: 99%;
+    accent-color: #91e40d;
+}
+#copy-password {
+    width: 25%;
+}
+#pass-strength-fix {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pass-strength-pic {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+#char-length-div {
+    display: flex;
+}
+#output {
+    color: #91e40d;
+    font-weight: bold;
+}
+#generate-pass-button {
+    width: 100%;
+    padding: 5px 0px;
+    border: 3px solid black;
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+    background-color: #91e40d;
+    border-radius: .5em;
+}
+#generate-pass-button:hover {
+    opacity: .8;
+    cursor: pointer;;
+}
+input[type="checkbox"] {
+    appearance: none;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: black;
+    border: 1.5px solid white;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #91e40d;
+    border-color: #91e40d;
+    color: black;
+    position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 0.05em;
+    left: 0.15em;
+    font-size: 0.9em;
+}
+#pass-characteristics input[type="checkbox"] {
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+#pass-characteristics label {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.2em;
+}
