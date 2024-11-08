@@ -8,7 +8,8 @@ const buttonGen = document.getElementById('generate-pass-button')
 const ShowPassDiv = document.getElementById('show-password')
 const copyPassDiv = document.getElementById('copy-password')
 const copyPassButton = document.getElementById('copy-password-icon')
-const passStrengthImg = document.getElementById('pass-strength-level')
+let passStrengthImg = document.getElementById('pass-strength-level')
+const charLength = Number(inputLength.value)
 
 function errorStyles() {
     genPassSpan.style.color = 'red'
@@ -23,11 +24,24 @@ function correctPassStyles() {
     genPassSpan.style.fontWeight = 'bold'
     genPassSpan.style.letterSpacing = '1px'
     copyPassDiv.style.display = 'initial'
-    passStrengthImg.src = "images/password_strength_level_1.jpg"
+    if (Number(inputLength.value) === 8 || Number(inputLength.value) === 9 && (uppercaseOption.checked ||lowercaseOption.checked || numbersOption.checked && !symbolsOption.checked)) {
+        passStrengthImg.src = "images/password_strength_level_1.jpg"
+        } else if (Number(inputLength.value) > 9 && Number(inputLength.value) < 13 && (uppercaseOption.checked && lowercaseOption.checked || numbersOption.checked && !symbolsOption.checked)) {
+        passStrengthImg.src = "images/password_strength_level_2.jpg"
+        } else if (Number(inputLength.value) > 12 && Number(inputLength.value) < 15 && uppercaseOption.checked && lowercaseOption.checked && numbersOption.checked && !symbolsOption.checked) {
+        passStrengthImg.src = "images/password_strength_level_3.jpg"
+        } else if (Number(inputLength.value) > 15 && uppercaseOption.checked && lowercaseOption.checked && numbersOption.checked && symbolsOption.checked) {
+        passStrengthImg.src = "images/password_strength_level_4.jpg"
+        }
+        
+    
+    // if (Number(inputLength.value) === 8 || === 9 && (uppercaseOption.checked || lowercaseOption.checked && !numbersOption.checked && !symbolsOption.checked)) {
+    //     passStrengthImg.src = "images/password_strength_level_1.jpg"    
+    // }
+    // // passStrengthImg.src = "images/password_strength_level_1.jpg"
 }
 
 function generateRandomPasword() {
-    const charLength = Number(inputLength.value)
     const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     const lowerCase = "abcdefghijklmnopqrstuvwxyz"
     const numbers = "0123456789"
