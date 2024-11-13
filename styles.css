@@ -31,14 +31,11 @@ html {
     text-align: center;
     color: #91e40d;
 }
-#pass-generated, #pass-length, #pass-strength {
+#pass-strength {
     display: flex;
     flex-direction: row;
 }
-#copy-password-icon {
-    width: 1em;
-}
-#show-password, #char-length {
+#char-length {
     width: 75%;
 }
 #pass-strength-fix {
@@ -51,9 +48,6 @@ html {
 #char-length-bar {
     width: 99%;
     accent-color: #91e40d;
-}
-#copy-password {
-    width: 25%;
 }
 #pass-strength-fix {
     width: 50%;
